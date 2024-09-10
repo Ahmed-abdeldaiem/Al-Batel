@@ -4,12 +4,9 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LayOut from './components/LayOut/LayOut'
 import Home from './components/Home/Home'
-import UserContextProvider from './Context/UserContext'
-import TransactionContextProvider from './Context/TransactionContext'
-import AddCustomer from './components/AddCustomer/AddCustomer'
-import CustomerDetails from './components/CustomerDetails/CustomerDetails'
-import AddTtansaction from './components/AddTtansaction/AddTtansaction'
-import AllTransactions from './components/AllTransactions/AllTransactions'
+
+
+
 import About from './components/About/About'
 import Services from './components/Services/Services'
 import Team from './components/Team/Team'
@@ -18,6 +15,7 @@ import Partners from './components/Partners/Partners'
 import News from './components/News/News'
 import Cources from './components/Cources/Cources'
 import Jobs from './components/Jobs/Jobs'
+import LanguageContextProvider from './Context/LanguageContext'
 
 function App() {
 
@@ -30,7 +28,7 @@ function App() {
       {path:'about' ,element:<About/>},
       {path:'services' ,element:<Services/>},
       {path:'team' ,element:<Team/>},
-      {path:'addtransaction/:id' ,element:<AddTtansaction/>},
+      // {path:'addtransaction/:id' ,element:<AddTtansaction/>},
       {path:'contact' ,element:<ContactUs/>},
       {path:'partners' ,element:<Partners/>},
       {path:'news' ,element:<News/>},
@@ -43,16 +41,16 @@ function App() {
 
   return (
     <>
-    <TransactionContextProvider>
+    <LanguageContextProvider>
 
   
-    <UserContextProvider>
+  
     <RouterProvider router={route}>
 
 </RouterProvider>
 
-    </UserContextProvider>
-    </TransactionContextProvider>
+   
+    </LanguageContextProvider>
   
     </>
   )
