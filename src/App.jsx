@@ -16,6 +16,8 @@ import News from './components/News/News'
 import Cources from './components/Cources/Cources'
 import Jobs from './components/Jobs/Jobs'
 import LanguageContextProvider from './Context/LanguageContext'
+import TeamContextProvider from './Context/TeamContext'
+import TeamMemberDetails from './components/TeamMemberDetails/TeamMemberDetails'
 
 function App() {
 
@@ -28,7 +30,7 @@ function App() {
       {path:'about' ,element:<About/>},
       {path:'services' ,element:<Services/>},
       {path:'team' ,element:<Team/>},
-      // {path:'addtransaction/:id' ,element:<AddTtansaction/>},
+      {path:'team/:id' ,element:<TeamMemberDetails/>},
       {path:'contact' ,element:<ContactUs/>},
       {path:'partners' ,element:<Partners/>},
       {path:'news' ,element:<News/>},
@@ -43,13 +45,13 @@ function App() {
     <>
     <LanguageContextProvider>
 
-  
+  <TeamContextProvider>
   
     <RouterProvider router={route}>
 
 </RouterProvider>
 
-   
+</TeamContextProvider>
     </LanguageContextProvider>
   
     </>

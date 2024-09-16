@@ -5,11 +5,11 @@
 
 
 .active{
-    @apply font-semibold transition-all duration-500 text-blue-700 
+    @apply font-semibold transition-all duration-500 text-blue-800 
   }
   
   .linkStyle:hover{
-    @apply font-semibold transition-all duration-500 text-blue-700 
+    @apply font-semibold transition-all duration-500 text-blue-800 
   }
   .row{
     @apply py-6 px-4  flex flex-wrap items-center

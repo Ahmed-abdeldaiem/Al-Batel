@@ -8,11 +8,11 @@ export let UserContext=  createContext()
 
 export default function UserContextProvider(props) {
 
-    function getAllUsers(){
+    function getAllFirstTeam(){
       
         return axios.get('http://localhost:5000/customers')
         .then((data)=>{
-            // console.log(data);
+            console.log(data);
             return data
         })
         .catch((error)=>{
@@ -21,32 +21,20 @@ export default function UserContextProvider(props) {
         })
     }
     
-    function getCustomerById(id){
+    // function getCustomerById(id){
      
-        return axios.get(`http://localhost:5000/customers/${id}`)
-        .then((data)=>{
-            // console.log(data);
-            return data
-        })
-        .catch((error)=>{
-            console.log(error);
+    //     return axios.get(`http://localhost:5000/customers/${id}`)
+    //     .then((data)=>{
+           
+    //         return data
+    //     })
+    //     .catch((error)=>{
+    //         console.log(error);
           
-        })
-    }
+    //     })
+    // }
     
-    function addCustomer(cstdata){
 
-      return axios.post(`http://localhost:5000/customers`,cstdata)
-      .then((trans)=>{
-          console.log('cst added successfully ',trans.data);
-        
-         
-      })
-      .catch((error)=>{
-          console.log(error);
-        
-      })
-    }
 
 
     function getTransForSpecifcUser(customerId){

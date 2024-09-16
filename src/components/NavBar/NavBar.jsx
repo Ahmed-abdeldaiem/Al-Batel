@@ -35,7 +35,7 @@ export default function NavBar() {
   return (
     <>
     {dir=='rtl'?<>
-    <header className="bg-blue-100 bg-opacity-50 backdrop-blur-lg shadow-sm shadow-green-200 fixed top-0 z-50 w-full">
+    <header className="bg-gray-400 bg-opacity-50 backdrop-blur-lg shadow-sm shadow-green-200 fixed top-0 z-50 w-full">
       <div className="mx-auto flex justify-center md:justify-evenly h-16 w-full items-center gap-4 lg:gap-8 px-4 sm:px-6 lg:px-8">
         <div className="flex w-full items-center justify-start gap-2 lg:gap-16 mx-8 lg:text-xl">
           <Link className="flex items-center text-gray-950 text-xl xl:text-2xl font-bold me-5" to="">
@@ -47,14 +47,14 @@ export default function NavBar() {
             <nav aria-label="Global" className="hidden lg:block">
               <ul className="flex items-center gap-8 lg:gap-4 xl:gap-9 font-semibold">
                 <li>
-                  <NavLink className="p-2 text-gray-500 linkStyle" to="">الرئيسية</NavLink>
+                  <NavLink className="p-2 text-gray-700 linkStyle" to="">الرئيسية</NavLink>
                 </li>
 
                 <li className="relative">
                   <button
                     onClick={() => toggleDropdown('company')}
                     id="dropdownNavbarLink"
-                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-500 rounded"
+                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-700 rounded"
                   >
                     الشركة
                     <svg
@@ -82,25 +82,25 @@ export default function NavBar() {
                     
                   >
                     <ul className="py-2 text-sm text-gray-700">
-                      <li><NavLink to="about" className="block text-gray-500 linkStyle px-4 py-2">من نحن</NavLink></li>
-                      <li><NavLink to="services" className="block text-gray-500 px-4 py-2 linkStyle">خدماتنا</NavLink></li>
-                      <li><NavLink to="team" className="block text-gray-500 px-4 py-2 linkStyle">فريقنا</NavLink></li>
+                      <li><NavLink to="about" className="block text-gray-700 linkStyle px-4 py-2">من نحن</NavLink></li>
+                      <li><NavLink to="services" className="block text-gray-700 px-4 py-2 linkStyle">خدماتنا</NavLink></li>
+                      <li><NavLink to="team" className="block text-gray-700 px-4 py-2 linkStyle">فريقنا</NavLink></li>
                       
                     </ul>
                   </div>
                 </li>
 
-                <li><NavLink className="p-2 text-gray-500 linkStyle" to="partners">شركاء النجاح</NavLink></li>
+                <li><NavLink className="p-2 text-gray-700 linkStyle" to="partners">شركاء النجاح</NavLink></li>
                 <li>
                   <NavLink
-                    className="p-2 text-gray-500 linkStyle"
+                    className="p-2 text-gray-700 linkStyle"
                     to="contact"
                   >
                     تواصل معنا
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-2 text-gray-500 linkStyle" to="news">
+                  <NavLink className="p-2 text-gray-700 linkStyle" to="news">
                     الأخبار
                   </NavLink>
                 </li>
@@ -109,7 +109,7 @@ export default function NavBar() {
                   <button
                     onClick={() => toggleDropdown('services')}
                     id="dropdownNavbarLink"
-                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-500 rounded"
+                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-700 rounded"
                   >
                     خدمات جديدة
                     <svg
@@ -325,14 +325,14 @@ export default function NavBar() {
             <nav aria-label="Global" className="hidden lg:block">
               <ul className="flex items-center gap-8 lg:gap-4 xl:gap-9 font-semibold">
                 <li>
-                  <NavLink className="p-2 text-gray-500 linkStyle" to="">Home</NavLink>
+                  <NavLink className="p-2 text-gray-700 linkStyle" to="">Home</NavLink>
                 </li>
 
                 <li className="relative">
                   <button
                     onClick={() => toggleDropdown('company')}
                     id="dropdownNavbarLink"
-                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-500 rounded"
+                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-700 rounded"
                   >
                     Company
                     <svg
@@ -360,25 +360,25 @@ export default function NavBar() {
                     
                   >
                     <ul className="py-2 text-sm text-gray-700">
-                      <li><NavLink to="about" className="block text-gray-500 linkStyle px-4 py-2">About Us</NavLink></li>
-                      <li><NavLink to="services" className="block text-gray-500 px-4 py-2 linkStyle">Services</NavLink></li>
-                      <li><NavLink to="team" className="block text-gray-500 px-4 py-2 linkStyle">Our Team</NavLink></li>
+                      <li><NavLink to="about" className="block text-gray-700 linkStyle px-4 py-2">About Us</NavLink></li>
+                      <li><NavLink to="services" className="block text-gray-700 px-4 py-2 linkStyle">Services</NavLink></li>
+                      <li><NavLink to="team" className="block text-gray-700 px-4 py-2 linkStyle">Our Team</NavLink></li>
                       
                     </ul>
                   </div>
                 </li>
 
-                <li><NavLink className="p-2 text-gray-500 linkStyle" to="partners">Parteners</NavLink></li>
+                <li><NavLink className="p-2 text-gray-700 linkStyle" to="partners">Parteners</NavLink></li>
                 <li>
                   <NavLink
-                    className="p-2 text-gray-500 linkStyle"
+                    className="p-2 text-gray-700 linkStyle"
                     to="contact"
                   >
                     Contact Us
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="p-2 text-gray-500 linkStyle" to="news">
+                  <NavLink className="p-2 text-gray-700 linkStyle" to="news">
                     News
                   </NavLink>
                 </li>
@@ -387,7 +387,7 @@ export default function NavBar() {
                   <button
                     onClick={() => toggleDropdown('services')}
                     id="dropdownNavbarLink"
-                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-500 rounded"
+                    className="flex linkStyle items-center justify-between w-full py-2 px-3 text-gray-700 rounded"
                   >
                   New Services
                     <svg
