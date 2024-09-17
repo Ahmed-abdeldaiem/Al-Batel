@@ -36,8 +36,12 @@ export default {
             opacity: '1',
           },
         },
-      },
+        borderMove: {
+          to: { '--border-angle': '360deg' }
+      }
+    },
       animation: {
+        borderMove: 'border 4s linear infinite',
         moveIn: 'moveIn 0.8s ease-out forwards',
         moveIn2: 'moveIn2 0.9s ease-out forwards',
       },

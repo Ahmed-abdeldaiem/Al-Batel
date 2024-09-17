@@ -43,13 +43,13 @@ export default function TeamMemberDetails() {
           </>
         ) : (
           <>
-            <h1 className="text-lg md:text-xl lg:text-4xl text-center font-bold text-green-600 py-8">
+            <h1 className="text-lg md:text-xl lg:text-4xl text-center font-bold text-blue-900 py-8">
               {employee?.name.ar}
             </h1>
 
-            <div className="flex flex-wrap w-full items-center justify-center my-6">
+            <div className="flex flex-wrap w-full items-center justify-center my-6 border-double border-4 rounded-xl bg-white border-yellow-600 ">
               {/* employee image */}
-              <div className="w-full md:w-1/2 flex justify-center items-center">
+              <div className="w-full md:w-1/2 flex p-3 justify-center items-center">
                 <img
                   className="rounded-full w-2/3 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
                   src={employee?.image?.url}
@@ -57,7 +57,7 @@ export default function TeamMemberDetails() {
                 />
               </div>
               {/* employee main data */}
-              <div className="w-full md:w-1/2 flex flex-col items-start">
+              <div className="w-full md:w-1/2 p-2 flex flex-col items-start">
                 <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
                   الوظيفة:
                   <span className="text-gray-700 font-normal">
@@ -133,13 +133,13 @@ export default function TeamMemberDetails() {
           </>
         ) : (
           <>
-            <h1 className="text-lg md:text-xl lg:text-4xl text-center font-bold text-green-600 py-8">
+            <h1 className="text-lg md:text-xl lg:text-4xl text-center font-bold text-blue-900 py-8">
               {employee?.name.en}
             </h1>
 
-            <div className="flex flex-wrap w-full items-center justify-center my-6">
+            <div className="flex flex-wrap w-full items-center justify-center my-6 border-double border-4 rounded-xl bg-white border-yellow-600 ">
               {/* employee image */}
-              <div className="w-full md:w-1/2 flex justify-center items-center">
+              <div className="w-full md:w-1/2 p-3 flex justify-center items-center">
                 <img
                   className="rounded-full w-2/3 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
                   src={employee?.image?.url}
@@ -147,7 +147,7 @@ export default function TeamMemberDetails() {
                 />
               </div>
               {/* employee main data */}
-              <div className="w-full md:w-1/2 flex flex-col items-start">
+              <div className="w-full md:w-1/2 flex flex-col p-2 items-start">
                 <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
                 Job Title :
                   <span className="text-gray-700 font-normal">
