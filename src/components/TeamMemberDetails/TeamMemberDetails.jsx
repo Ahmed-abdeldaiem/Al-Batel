@@ -1,20 +1,128 @@
-import React, { useState } from 'react'
-import style from './TeamMemberDetails.module.css'
-
-
-
-
+import React, { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { LanguageContext } from "../../Context/LanguageContext";
+import { TeamContext } from "../../Context/TeamContext";
+import Loader from "../Loader/Loader";
+import style from "./TeamMemberDetails.module.css";
 
 export default function TeamMemberDetails() {
+  const { rightToLeft, leftToRight, dir } = useContext(LanguageContext);
+  const { getPersonById } = useContext(TeamContext);
+  const [Loading, setLoading] = useState(false);
+  const [employee, setEmployee] = useState([]);
 
-const [counter, setcounter] = useState(0)
+  let { id } = useParams();
 
-  return <>
-  
- <div className='py-64 bg-blue-500'>
- <h2>TeamMemberDetails</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eum dolore unde voluptatem quae sunt!</p>
-  
- </div>
-  </>
+  async function getEmployeeData(id) {
+    setLoading(true);
+    let data = await getPersonById(id);
+
+    // console.log('function',id);
+
+    console.log(data.qualifications.map((q, index) => q.title.ar));
+
+    setEmployee(data);
+
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    // console.log('useeffect',id);
+    getEmployeeData(id);
+  }, [id]);
+
+  return (
+    <>
+      {Loading ? <Loader /> : null}
+
+      <div className="container py-24 ">
+        {employee.length == 0 ? (
+          <>
+            <h1>no data yet from server</h1>
+          </>
+        ) : (
+          <>
+            <h1 className="text-lg md:text-xl lg:text-4xl text-center font-bold text-green-600 py-8">
+              {employee?.name.ar}
+            </h1>
+
+            <div className="flex flex-wrap w-full items-center justify-center my-6">
+              {/* employee image */}
+              <div className="w-full md:w-1/2 flex justify-center items-center">
+                <img
+                  className="rounded-full w-2/3 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
+                  src={employee?.image?.url}
+                  alt={employee?.image?.description?.ar}
+                />
+              </div>
+              {/* employee main data */}
+              <div className="w-full md:w-1/2 flex flex-col items-start">
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                  الوظيفة:
+                  <span className="text-gray-700 font-normal">
+                    {employee?.job_title.ar}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                  الجنسية:
+                  <span className="text-gray-700 font-normal">
+                    {employee?.nationality.ar}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                  التخصص:
+                  <span className="text-gray-700 font-normal">
+                    {employee?.field.ar}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                  الدرجة العلمية:
+                  <span className="text-gray-700 font-normal">
+                    {employee?.degree.ar}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                  الخبرة:
+                  <span className="text-gray-700 font-normal">
+                    {employee?.experience_years.ar}
+                  </span>
+                </h2>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-full  items-center justify-center my-12">
+              <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
+                <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                  <thead className="text-xs text-gray-700 uppercase bg-blue-200 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                      <th scope="col" className="px-6 py-3  text-green-600 font-semibold text-lg lg:text-2xl">
+                        المؤهلات المهنية
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {employee?.qualifications?.map((q, index) =>  (
+                        <tr
+                          key={index}
+                          className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                        >
+                          <th
+                            scope="row"
+                            className="px-6 py-4 font-normal  text-gray-900 whitespace-nowrap dark:text-white"
+                          >
+                            {q?.title?.ar } <span className="px-5">{q?.abbreviation?.ar}</span>
+                            
+                          </th>
+                        </tr>
+                      ))
+                  }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+    </>
+  );
 }
