@@ -35,6 +35,7 @@ export default function TeamMemberDetails() {
     <>
       {Loading ? <Loader /> : null}
 
+      {dir=='rtl'?<>
       <div className="container py-24 ">
         {employee.length == 0 ? (
           <>
@@ -123,6 +124,101 @@ export default function TeamMemberDetails() {
           </>
         )}
       </div>
+      </>:<>
+      
+      <div className="container py-24 ">
+        {employee.length == 0 ? (
+          <>
+            <h1>no data yet from server</h1>
+          </>
+        ) : (
+          <>
+            <h1 className="text-lg md:text-xl lg:text-4xl text-center font-bold text-green-600 py-8">
+              {employee?.name.en}
+            </h1>
+
+            <div className="flex flex-wrap w-full items-center justify-center my-6">
+              {/* employee image */}
+              <div className="w-full md:w-1/2 flex justify-center items-center">
+                <img
+                  className="rounded-full w-2/3 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
+                  src={employee?.image?.url}
+                  alt={employee?.image?.description?.en}
+                />
+              </div>
+              {/* employee main data */}
+              <div className="w-full md:w-1/2 flex flex-col items-start">
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                Job Title :
+                  <span className="text-gray-700 font-normal">
+                    {employee?.job_title.en}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                  
+                Nationality :
+                  <span className="text-gray-700 font-normal">
+                    {employee?.nationality.en}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                Field :
+                  <span className="text-gray-700 font-normal">
+                    {employee?.field.en}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                Academic degree:
+                  <span className="text-gray-700 font-normal">
+                    {employee?.degree.en}
+                  </span>
+                </h2>
+                <h2 className="text-lg md:text-xl lg:text-2xl text-gray-950 font-semibold my-4">
+                Experience Years :
+                  <span className="text-gray-700 font-normal">
+                    {employee?.experience_years.en}
+                  </span>
+                </h2>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap w-full  items-center justify-center my-12">
+              <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
+                <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                  <thead className="text-xs text-gray-700 uppercase bg-blue-200 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                      <th scope="col" className="px-6 py-3  text-green-600 font-semibold text-lg lg:text-2xl">
+                      Professional qualifications
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {employee?.qualifications?.map((q, index) =>  (
+                        <tr
+                          key={index}
+                          className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                        >
+                          <th
+                            scope="row"
+                            className="px-6 py-4 font-normal  text-gray-900 whitespace-nowrap dark:text-white"
+                          >
+                            {q?.title?.en } <span className="px-5">{q?.abbreviation?.en}</span>
+                            
+                          </th>
+                        </tr>
+                      ))
+                  }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+      
+      </>}
+
+     
     </>
   );
 }
