@@ -14,7 +14,7 @@ export default function LayOut() {
 const [counter, setcounter] = useState(0)
 
   return <>
- <div className='bg-slate-200'>
+ <div className='bg-[#f2f1ef]'>
  
   <NavBar/>
  

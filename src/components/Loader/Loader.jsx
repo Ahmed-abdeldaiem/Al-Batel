@@ -12,7 +12,7 @@ const [counter, setcounter] = useState(0)
 
   return <>
   
-  <div className="fixed inset-0 z-30 flex justify-center items-center bg-gray-100 bg-opacity-90">
+  <div className="fixed inset-0 z-30 flex justify-center items-center bg-gray-100 bg-opacity-50">
   {/* Image Container */}
   <div className="absolute inset-0 flex justify-center items-center">
     <img

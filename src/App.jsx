@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import LayOut from './components/LayOut/LayOut'
 import Home from './components/Home/Home'
 
@@ -23,7 +23,7 @@ function App() {
 
   
 
-  let route = createBrowserRouter([
+  let route = createHashRouter([
     {path:'',element:<LayOut/>,children:[
       {index:true ,element: <Home/>},
      

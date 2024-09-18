@@ -47,11 +47,11 @@ export default function TeamMemberDetails() {
               {employee?.name.ar}
             </h1>
 
-            <div className="flex flex-wrap w-full items-center justify-center my-6 border-double border-4 rounded-xl bg-white border-yellow-600 ">
+            <div className="flex flex-wrap w-full items-center justify-center my-6 border-double border-4 rounded-xl bg-white  ">
               {/* employee image */}
               <div className="w-full md:w-1/2 flex p-3 justify-center items-center">
                 <img
-                  className="rounded-full w-2/3 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
+                  className="rounded-full w-1/2 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
                   src={employee?.image?.url}
                   alt={employee?.image?.description?.ar}
                 />
@@ -137,11 +137,11 @@ export default function TeamMemberDetails() {
               {employee?.name.en}
             </h1>
 
-            <div className="flex flex-wrap w-full items-center justify-center my-6 border-double border-4 rounded-xl bg-white border-yellow-600 ">
+            <div className="flex flex-wrap w-full items-center justify-center my-6 border-double border-4 rounded-xl bg-white ">
               {/* employee image */}
               <div className="w-full md:w-1/2 p-3 flex justify-center items-center">
                 <img
-                  className="rounded-full w-2/3 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
+                  className="rounded-full w-1/2 border-2 border-opacity-40 border-blue-800 shadow-md shadow-green-300 transition-all duration-500 hover:shadow-blue-300 hover:border-green-600"
                   src={employee?.image?.url}
                   alt={employee?.image?.description?.en}
                 />
