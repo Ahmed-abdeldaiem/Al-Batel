@@ -133,7 +133,7 @@ export default function Team() {
           )}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex w-full flex-wrap flex-col md:flex-row justify-center items-center">
 
             <div className="w-full md:w-1/2">
             <h2 className="text-green-600 text-3xl text-center  my-5 font-semibold">
@@ -227,6 +227,46 @@ export default function Team() {
               );
             })
           )}
+        </div>
+            </div>
+            <div className="w-full md:w-1/2">
+            <h2 className="text-green-600 text-3xl text-center  my-5 font-semibold">
+الرقابة والجودة
+        </h2>
+        <hr className="border-blue-700 border-t-2 w-60 my-5 mx-auto" />
+        <div className="flex flex-wrap w-full items-center justify-center">
+       
+                <Link
+                 
+                 
+                  className="w-full group md:w-2/3 lg:w-1/2 hover:-translate-y-9  rounded-lg transition-all ease-in-out duration-700 p-6"
+                >
+                  <div className="bg-white hover:bg-slate-100 flex flex-col h-[400px]  justify-center items-center overflow-hidden border border-gray-200 rounded-3xl rounded-tl-none shadow-md hover:shadow-green-500 transition-all duration-700 ease-in-out">
+                    {/* Team Member Image */}
+                    <img
+                      className="rounded-full my-auto mx-auto group-hover:scale-110 transition-all duration-500  w-40 h-40 object-center"
+                      alt='الصورة الشخصية للهنوف عبدالعزيز'
+                      src='https://pbs.twimg.com/profile_images/1772264055920603136/nHhDFMe2_400x400.jpg'
+                      
+                    />
+                    {/* Card Content */}
+                    <div className="p-5 flex flex-col justify-center items-center">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                       الهنوف عبدالعزيز
+                      </h5>
+                      <p className="mb-3 font-normal text-gray-700">
+                        مدقق رقابة وجودة
+                      </p>
+                      {/* Read More Button */}
+
+                      <Link
+                      
+                        className="relative text-wrap opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full border-green-300 bg-indigo-300 bg-opacity-50  inline-flex items-center justify-center p-2 text-sm  overflow-hidden  text-yellow-900 font-semibold transition-all duration-700 ease-out border-2  rounded-lg shadow-md group"
+                      >اضغط لعرض المزيد</Link>
+                    </div>
+                  </div>
+                </Link>
+              
         </div>
             </div>
 
@@ -335,7 +375,7 @@ Administrative and economic consulting and translation
   )}
 </div>
 
-<div className="flex justify-center items-center">
+<div className="flex w-full flex-wrap flex-col md:flex-row justify-center items-center">
 
     <div className="w-full md:w-1/2">
     <h2 className="text-green-600 text-3xl text-center  my-5 font-semibold">
@@ -435,6 +475,49 @@ Click to view more
   )}
 </div>
     </div>
+    <div className="w-full md:w-1/2">
+            <h2 className="text-green-600 text-3xl text-center  my-5 font-semibold">
+            Control and Quality
+        </h2>
+        <hr className="border-blue-700 border-t-2 w-60 my-5 mx-auto" />
+        <div className="flex flex-wrap w-full items-center justify-center">
+       
+                <Link
+                 
+                 
+                  className="w-full group md:w-2/3 lg:w-1/2 hover:-translate-y-9  rounded-lg transition-all ease-in-out duration-700 p-6"
+                >
+                  <div className="bg-white hover:bg-slate-100 flex flex-col h-[400px]  justify-center items-center overflow-hidden border border-gray-200 rounded-3xl rounded-tl-none shadow-md hover:shadow-green-500 transition-all duration-700 ease-in-out">
+                    {/* Team Member Image */}
+                    <img
+                      className="rounded-full my-auto mx-auto group-hover:scale-110 transition-all duration-500  w-40 h-40 object-center"
+                      alt='Personal photo for elhanof'
+                      src='https://pbs.twimg.com/profile_images/1772264055920603136/nHhDFMe2_400x400.jpg'
+                      
+                    />
+                    {/* Card Content */}
+                    <div className="p-5 flex flex-col justify-center items-center">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Alhanof Abdelaziz
+                      </h5>
+                      <p className="mb-3 font-normal text-gray-700">
+                      Quality Control Auditor
+                      </p>
+                      {/* Read More Button */}
+
+                      <Link
+                      
+                        className="relative text-wrap opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-full border-green-300 bg-indigo-300 bg-opacity-50  inline-flex items-center justify-center p-2 text-sm  overflow-hidden  text-yellow-900 font-semibold transition-all duration-700 ease-out border-2  rounded-lg shadow-md group"
+                      >
+Click to view more
+                    
+                      </Link>
+                    </div>
+                  </div>
+                </Link>
+              
+        </div>
+            </div>
 
 </div>
 
