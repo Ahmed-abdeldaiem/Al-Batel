@@ -17,7 +17,7 @@ export default function Manager() {
         </h2>
         <hr className="border-blue-700 border-t-2 w-40 mx-auto" />
         <hr className="border-blue-700 border-t-2 w-20 my-2 mx-auto" />
-        <div className=" flex flex-col md:flex-row w-full overflow-hidden rounded-md md:rounded-full border-2 border-blue-300 shadow-lg shadow-green-300 transition-all duration-700  hover:border-green-400 hover:shadow-blue-300">
+        <div className=" flex flex-col md:flex-row w-full overflow-hidden rounded-md md:rounded-full border-2 border-blue-300 shadow-md shadow-green-200 transition-all duration-700  hover:border-green-400 hover:shadow-blue-300">
           <div
             className={`relative w-full  bg-[url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-fixed bg-cover bg-no-repeat`}
           >
@@ -52,7 +52,7 @@ export default function Manager() {
         </h2>
         <hr className="border-blue-700 border-t-2 w-40 mx-auto" />
         <hr className="border-blue-700 border-t-2 w-20 my-2 mx-auto" />
-        <div className=" flex flex-col md:flex-row w-full overflow-hidden rounded-md md:rounded-full border-2 border-blue-300 shadow-lg shadow-green-300 transition-all duration-700  hover:border-green-400 hover:shadow-blue-300">
+        <div className=" flex flex-col md:flex-row w-full overflow-hidden rounded-md md:rounded-full border-2 border-blue-300 shadow-md shadow-green-200 transition-all duration-700  hover:border-green-400 hover:shadow-blue-300">
           <div
             className={`relative w-full  bg-[url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-fixed bg-cover bg-no-repeat`}
           >

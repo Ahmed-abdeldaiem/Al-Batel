@@ -45,6 +45,15 @@ export default {
         moveIn: 'moveIn 0.8s ease-out forwards',
         moveIn2: 'moveIn2 0.9s ease-out forwards',
       },
+      letterSpacing: {
+        tighter: '-0.02em',
+        tight: '-0.01em',
+        normal: '0',
+        wide: '0.02em',
+        wider: '0.04em',
+        widest: '0.1em',
+        widest2: '0.4em', // Example custom value
+      }
     },
   },
   plugins: [],

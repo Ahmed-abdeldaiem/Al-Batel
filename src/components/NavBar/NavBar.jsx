@@ -63,7 +63,7 @@ export default function NavBar() {
                 
 
                 <li><NavLink className="p-2 text-gray-700 text-nowrap linkStyle" to="partners">شركاء النجاح</NavLink></li>
-                <li>
+             
 
  {/* Dropdown menu */}
                 <li className="relative">
@@ -106,7 +106,6 @@ export default function NavBar() {
                   </div>
                 </li>
 
-                </li>
                
                
  
@@ -309,7 +308,7 @@ export default function NavBar() {
                
 
                <li><NavLink className="p-2 text-gray-700 text-nowrap linkStyle" to="partners">Parteners</NavLink></li>
-               <li>
+               
 
 {/* Dropdown menu */}
                <li className="relative">
@@ -352,7 +351,7 @@ export default function NavBar() {
                  </div>
                </li>
 
-               </li>
+             
               
               
 

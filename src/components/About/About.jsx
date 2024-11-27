@@ -6,50 +6,50 @@ export default function About() {
   const [counter, setCounter] = useState(0);
   const { rightToLeft, leftToRight, dir } = useContext(LanguageContext);
   const branches = [
-    {
+    { id: 1,
       name: {
         ar: "الرياض",
         en: "Riyadh",
       },
     },
-    {
+    {id: 2,
       name: {
         ar: "جدة",
         en: "Jeddah",
       },
     },
-    {
+    {id: 3,
       name: {
         ar: "المدينة",
-        en: "Almadenah",
+        en: "Madinah",
       },
     },
-    {
+    {id: 4,
       name: {
         ar: "الخبر",
         en: "Khobar",
       },
     },
     ,
-    {
+    {id: 5,
       name: {
         ar: "حفر الباطن",
         en: "Hafar Al-Batin",
       },
     },
-    {
+    {id: 6,
       name: {
         ar: "خميس مشيط",
         en: "Khamis Mushait",
       },
     },
-    {
+    {id: 7,
       name: {
-        ar: "جيزان",
-        en: "Jizan",
+        ar: "جازان",
+        en: "Jazan",
       },
     },
-    {
+    {id: 8,
       name: {
         ar: "بريدة",
         en: "Buraydah",
@@ -144,7 +144,7 @@ export default function About() {
                   تاريخ الشركة
                 </h3>
                 <p className="text-gray-900 text-xl py-2 m-2 flex font-semibold">
-                  <i class="fa-solid fa-calendar-days text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-calendar-days text-green-600 text-xl m-2"></i>
                   تأسست شركة باتل عبدالله الباتل وشركاؤه للاستشارات المهنية
                   بموجب ترخيص الهيئة السعودية للمحاسبين القانونيين لمزاولة أعمال
 
@@ -154,7 +154,7 @@ export default function About() {
 
                 </p>
                 <p className="text-gray-900 text-xl m-2 py-5 flex font-semibold">
-                  <i class="fa-solid fa-id-card  text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-id-card  text-green-600 text-xl m-2"></i>
                   كما أن الشركة حاصلة على تصريح لتقديم الاستشارات المالية
                   والاقتصادية والإدارية من وزارة التجارة
                 </p>
@@ -175,16 +175,16 @@ export default function About() {
                   مقر الشركة
                 </h3>
                 <p className="text-gray-900 text-xl py-2 m-2 flex font-semibold">
-                  <i class="fa-solid fa-location-dot  text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-location-dot  text-green-600 text-xl m-2"></i>
                   الرياض هي نقطة البداية والفرع الرئيسي للشركة
                 </p>
                 <p className="text-gray-900 text-xl py-2 m-2 my-4 flex font-semibold">
-                  <i class="fa-solid fa-map-location text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-map-location text-green-600 text-xl m-2"></i>
                   7162 مبنى السمو، الطريق الدائرى الشرقى، حى الربوة، ص ب 28565
                   الرمز البريدى 11447
                 </p>
                 <p className="text-gray-900 text-xl m-2 py-5 flex font-semibold">
-                  <i class="fa-solid fa-map-location-dot  text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-map-location-dot  text-green-600 text-xl m-2"></i>
 
                   بالإضافة إلى العديد من الفروع داخل وخارج المملكة
 
@@ -209,18 +209,20 @@ export default function About() {
             فروعنا داخل المملكة العربية السعودية
           </h2>
           <div className=" w-full flex bg-[url('https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/about1.jpg?raw=true')] bg-fixed bg-cover bg-center flex-wrap flex-col items-center justify-center md:flex-row bg-white shadow-md rounded-3xl my-8 ">
-            {branches.map((branch) => {
+            {branches.map((branch,index) => {
               return (
-                <>
-                  <div className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
+                  
+                 <Link to={`/branch/${branch.id}`} key={index} className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
                     {/* <div className="p-4"> */}
-                    <i class="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
+                    <i className="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
                     <p className="text-2xl text-green-800 group-hover:text-blue-700 transition-all duration-700 font-semibold">
                       {branch.name.ar}
                     </p>
-                    {/* </div> */}
-                  </div>
-                </>
+                  
+                  </Link>
+                
+                 
+                
               );
             })}
           </div>
@@ -228,18 +230,18 @@ export default function About() {
             فروعنا خارج المملكة العربية السعودية
           </h2>
           <div className=" w-full flex flex-wrap bg-fixed flex-col items-center justify-evenly md:flex-row bg-white shadow-md bg-[url('https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/about1.jpg?raw=true')] bg-cover bg-center rounded-3xl my-8 ">
-            {branches2.map((branch) => {
+            {branches2.map((branch,index) => {
               return (
-                <>
-                  <div className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
+                
+                  <div key={index} className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
                     {/* <div className="p-4"> */}
-                    <i class="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
+                    <i className="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
                     <p className="text-2xl text-green-800 group-hover:text-blue-700 transition-all duration-700 font-semibold">
                       {branch.name.ar}
                     </p>
                     {/* </div> */}
                   </div>
-                </>
+                
               );
             })}
           </div>
@@ -291,7 +293,7 @@ export default function About() {
           </div>
           <div className="bg-white">
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 تميزت شركة باتل عبدالله الباتل وشركاؤه للاستشارات المهنية
                 بالخبرة الواسعة في عمليات المراجعة الخارجية والداخلية
@@ -300,7 +302,7 @@ export default function About() {
               </span>
             </p>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 كما تميزت الشركة في اتمامها لكافة هذه العمليات على أكمل وجه
                 بالإضافة الى الالتزام التام بفريق العمل المحدد بالعرض الذي نقدمه
@@ -308,7 +310,7 @@ export default function About() {
               </span>
             </p>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 لدينا التزام تام بالوقت المحدد الذي يتم التعاقد عليه مع كل جهة
                 وكذا في تقديم الدعم المستمر على مدى مدار العمل بالإضافة الى
@@ -316,7 +318,7 @@ export default function About() {
               </span>
             </p>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 وتتميز الشركة أيضًا بكادر بشرى يتمتع بالخبرات اللازمة لإتمام
                 المهام المكلف بها، والذي يتميز أيضًا بحسن الخلق والمعاملة الجيدة
@@ -370,7 +372,7 @@ export default function About() {
               </span>
             </div>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 للتعرف اكثر على فريقنا يمكنك الضغط هنا
                 <Link
@@ -432,7 +434,7 @@ export default function About() {
                   Company History
                 </h3>
                 <p className="text-gray-900 text-xl py-2 m-2 flex font-semibold">
-                  <i class="fa-solid fa-calendar-days text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-calendar-days text-green-600 text-xl m-2"></i>
                   Batel Abdullah Al Batel & Partners Professional Consulting
                   Company was established under the license of the Saudi
                   Organization for Certified Public Accountants to practice
@@ -440,7 +442,7 @@ export default function About() {
                   07/02/2006 AD.
                 </p>
                 <p className="text-gray-900 text-xl m-2 py-5 flex font-semibold">
-                  <i class="fa-solid fa-id-card  text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-id-card  text-green-600 text-xl m-2"></i>
                   The company is also licensed to provide financial, economic
                   and administrative consulting from the Ministry of Commerce.
                 </p>
@@ -461,17 +463,17 @@ export default function About() {
                   company location
                 </h3>
                 <p className="text-gray-900 text-xl py-2 m-2 flex font-semibold">
-                  <i class="fa-solid fa-location-dot  text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-location-dot  text-green-600 text-xl m-2"></i>
                   Riyadh is the starting point and the main branch of the
                   company.
                 </p>
                 <p className="text-gray-900 text-xl py-2 m-2 my-4 flex font-semibold">
-                  <i class="fa-solid fa-map-location text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-map-location text-green-600 text-xl m-2"></i>
                   7162 Al-Samoa Building, Eastern Ring Road, Al-Rabwa District,
                   P.O. Box 28565 Zip Code 11447
                 </p>
                 <p className="text-gray-900 text-xl m-2 py-5 flex font-semibold">
-                  <i class="fa-solid fa-map-location-dot  text-green-600 text-xl m-2"></i>
+                  <i className="fa-solid fa-map-location-dot  text-green-600 text-xl m-2"></i>
                   We have many branches inside and outside the kingdom.
                 </p>
               </div>
@@ -494,18 +496,16 @@ export default function About() {
             Our branches inside the Kingdom of Saudi Arabia
           </h2>
           <div className=" w-full flex bg-[url('https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/about1.jpg?raw=true')] bg-fixed bg-cover bg-center flex-wrap flex-col items-center justify-center md:flex-row bg-white shadow-md rounded-3xl my-8 ">
-            {branches.map((branch) => {
+            {branches.map((branch,index) => {
               return (
-                <>
-                  <div className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
-                    {/* <div className="p-4"> */}
-                    <i class="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
-                    <p className="text-2xl text-green-800 group-hover:text-blue-700 transition-all duration-700 font-semibold">
-                      {branch.name.en}
-                    </p>
-                    {/* </div> */}
-                  </div>
-                </>
+                <Link to={`/branch/${branch.id}`} key={index} className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
+                {/* <div className="p-4"> */}
+                <i className="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
+                <p className="text-2xl text-green-800 group-hover:text-blue-700 transition-all duration-700 font-semibold">
+                  {branch.name.en}
+                </p>
+              
+              </Link>
               );
             })}
           </div>
@@ -513,18 +513,18 @@ export default function About() {
             Our branches outside the Kingdom of Saudi Arabia
           </h2>
           <div className=" w-full flex flex-wrap bg-fixed flex-col items-center justify-evenly md:flex-row bg-white shadow-md bg-[url('https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/about1.jpg?raw=true')] bg-cover bg-center rounded-3xl my-8 ">
-            {branches2.map((branch) => {
+            {branches2.map((branch,index) => {
               return (
-                <>
-                  <div className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
+              
+                  <div key={index} className="flex cursor-pointer flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6 group transition-all duration-500 hover:shadow-blue-400 shadow-sm rounded-full p-5">
                     {/* <div className="p-4"> */}
-                    <i class="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
+                    <i className="fa-solid fa-map-location-dot text-blue-800 text-5xl group-hover:scale-110 group-hover:text-green-800 transition-all duration-700 py-3"></i>
                     <p className="text-2xl text-green-800 group-hover:text-blue-700 transition-all duration-700 font-semibold">
                       {branch.name.en}
                     </p>
                     {/* </div> */}
                   </div>
-                </>
+                
               );
             })}
           </div>
@@ -580,7 +580,7 @@ export default function About() {
           </div>
           <div className="bg-white">
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 Batel Abdullah Al Batel & Partners Professional Consulting
                 Company has distinguished itself with its extensive experience
@@ -590,7 +590,7 @@ export default function About() {
               </span>
             </p>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 The company has also been distinguished in completing all these
                 operations in the best possible way, in addition to the full
@@ -599,7 +599,7 @@ export default function About() {
               </span>
             </p>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 We have full commitment to the specific time contracted with
                 each party, as well as providing continuous support throughout
@@ -608,7 +608,7 @@ export default function About() {
               </span>
             </p>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 The company is also distinguished by a human cadre with the
                 necessary expertise to complete the tasks assigned to it, and
@@ -663,7 +663,7 @@ export default function About() {
               </span>
             </div>
             <p className="p-5 mx-5 font-semibold text-blue-950 text-lg flex items-baseline">
-              <i class="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
+              <i className="fa-solid fa-circle-dot text-green-600 text-lg mx-2"></i>
               <span>
                 To learn more about our team, you can click here.
                 <Link

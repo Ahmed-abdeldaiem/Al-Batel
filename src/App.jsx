@@ -20,6 +20,7 @@ import TeamContextProvider from './Context/TeamContext'
 import TeamMemberDetails from './components/TeamMemberDetails/TeamMemberDetails'
 import SendCv from './components/SendCv/SendCv'
 import Rfp from './components/Rfp/Rfp'
+import BranchDetails from './components/BranchDetails/BranchDetails'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       {path:'services' ,element:<Services/>},
       {path:'team' ,element:<Team/>},
       {path:'team/:id' ,element:<TeamMemberDetails/>},
+      {path:'branch/:id' ,element:<BranchDetails/>},
       {path:'contact' ,element:<ContactUs/>},
       {path:'partners' ,element:<Partners/>},
       {path:'sendCv' ,element:<SendCv/>},
