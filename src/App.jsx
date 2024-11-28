@@ -21,6 +21,9 @@ import TeamMemberDetails from './components/TeamMemberDetails/TeamMemberDetails'
 import SendCv from './components/SendCv/SendCv'
 import Rfp from './components/Rfp/Rfp'
 import BranchDetails from './components/BranchDetails/BranchDetails'
+import CvTemplate from './components/CvTemplate/CvTemplate'
+import CvLayout from './components/CvLayout/CvLayout'
+import TeamPage2 from './components/TeamPage2/TeamPage2'
 
 
 function App() {
@@ -33,7 +36,7 @@ function App() {
      
       {path:'about' ,element:<About/>},
       {path:'services' ,element:<Services/>},
-      {path:'team' ,element:<Team/>},
+      {path:'team' ,element:<TeamPage2/>},
       {path:'team/:id' ,element:<TeamMemberDetails/>},
       {path:'branch/:id' ,element:<BranchDetails/>},
       {path:'contact' ,element:<ContactUs/>},
@@ -41,7 +44,11 @@ function App() {
       {path:'sendCv' ,element:<SendCv/>},
     
       {path:'RFP' ,element:<Rfp/>},
-    ]}
+    ]},{
+      path:'/CV_Template',element:<CvLayout/>,children:[
+        {index: true ,element:<CvTemplate/>}
+      ]
+    }
   ])
 
   

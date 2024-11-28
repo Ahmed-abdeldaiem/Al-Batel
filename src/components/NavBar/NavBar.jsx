@@ -40,7 +40,7 @@ export default function NavBar() {
       <div className="mx-auto flex justify-center md:justify-evenly h-16 w-full items-center gap-4 lg:gap-8 px-4 sm:px-6 lg:px-8">
         <div className="flex w-full items-center justify-start gap-2 lg:gap-16 mx-8 lg:text-xl">
           <Link className="flex items-center text-gray-950 text-xl xl:text-2xl font-bold me-5" to="">
-            <img src="/logo.png" className="w-16 inline-block px-2" alt="Elbatel Logo" />
+            <img src="https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/home/logo.png?raw=true" className="w-16 inline-block px-2" alt="Elbatel Logo" />
             <span className="text-green-600 mx-3">الباتل</span>
           </Link>
 
@@ -285,7 +285,7 @@ export default function NavBar() {
      <div className="mx-auto flex justify-center md:justify-evenly h-16 w-full items-center gap-4 lg:gap-8 px-4 sm:px-6 lg:px-8">
        <div className="flex w-full items-center justify-start gap-2 lg:gap-16 mx-8 lg:text-xl">
          <Link className="flex items-center text-gray-950 text-xl xl:text-2xl font-bold me-5" to="">
-           <img src="/logo.png" className="w-16 inline-block px-2" alt="Elbatel Logo" />
+           <img src="https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/home/logo.png?raw=true" className="w-16 inline-block px-2" alt="Elbatel Logo" />
            <span className="text-green-600 mx-3">Al-Batel</span>
          </Link>
 

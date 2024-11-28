@@ -217,7 +217,7 @@ let settings = {
   <Slider  {...settings}  className='w-full flex overflow-hidden flex-wrap justify-center z-20'>
   {sponcersAr.map((sponcer, index) => {
                   return (
-                    <div className="lg:w-1/4 md:w-1/3 px-3  overflow-hidden ">
+                    <div key={index} className="lg:w-1/4 md:w-1/3 px-3  overflow-hidden ">
                       {/* rounded-tr-3xl rounded-tl-3xl */}
                       <div className="flex  flex-col-reverse border rounded-3xl shadow-lg overflow-hidden hover:shadow-green-100 my-10  cursor-pointer group duration-700 transition-all bg-white border-gray-300 w-full">
                         {/* <div className=" flex  p-2 flex-col overflow-hidden items-center justify-center text-center">

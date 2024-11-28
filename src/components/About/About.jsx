@@ -104,7 +104,7 @@ export default function About() {
                 ALBatel & Co
               </h3>
               <img
-                src="\logo.png"
+                src="https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/home/logo.png?raw=true"
                 className="w-[50px] mt-1"
                 alt="logo image "
               />
@@ -403,7 +403,7 @@ export default function About() {
                 ALBatel & Co
               </h3>
               <img
-                src="\logo.png"
+                src="https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/home/logo.png?raw=true"
                 className="w-[50px] mt-1"
                 alt="logo image "
               />

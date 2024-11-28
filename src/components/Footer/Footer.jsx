@@ -21,7 +21,7 @@ export default function Footer() {
                   className="flex bg-green-50 p-2 bg-opacity-30 group hover:bg-opacity-40 duration-700 transition-all rounded-full z-20 items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
                 >
                   <img
-                    src="/logo.png"
+                    src="https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/home/logo.png?raw=true"
                     className="h-8 cursor-pointer "
                     alt="elbatel Logo"
                   />
@@ -200,7 +200,7 @@ export default function Footer() {
                   className="flex bg-green-50 p-2 bg-opacity-30 group hover:bg-opacity-40 duration-700 transition-all rounded-full z-20 items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
                 >
                   <img
-                    src="/logo.png"
+                    src="https://github.com/Ahmed-abdeldaiem/Albatel-API/blob/main/home/logo.png?raw=true"
                     className="h-8 cursor-pointer "
                     alt="elbatel Logo"
                   />
